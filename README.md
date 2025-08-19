@@ -2,6 +2,9 @@
 
 A Java application that demonstrates **Low-Level Designs** and **optimal data structures** for efficient retrieval of book data from Amazon's Top 50 bestselling books dataset (2009-2019).
 
+## Screenshots
+![ezgif-54cac3f0db53cf](https://github.com/user-attachments/assets/622cdb8d-829b-46c1-b056-5a938131bf28)
+
 ## Project Architecture
 
 The project follows a clean, layered architecture with proper separation of concerns:
