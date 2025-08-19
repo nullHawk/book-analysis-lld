@@ -1,8 +1,8 @@
 package com.nullhawk.books.gui;
 
 import com.nullhawk.books.model.Book;
-import com.nullhawk.books.service.BookService;
-import com.nullhawk.books.service.InMemoryLoader;
+import com.nullhawk.books.services.BookService;
+import com.nullhawk.books.services.InMemoryLoader;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

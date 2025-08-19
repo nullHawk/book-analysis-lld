@@ -1,8 +1,8 @@
-# 📚 Amazon Bestseller Book Analysis
+# Amazon Bestseller Book Analysis
 
 A Java application that demonstrates **Low-Level Designs** and **optimal data structures** for efficient retrieval of book data from Amazon's Top 50 bestselling books dataset (2009-2019).
 
-## 🏗️ Project Architecture
+## Project Architecture
 
 The project follows a clean, layered architecture with proper separation of concerns:
 
@@ -26,7 +26,7 @@ src/com/nullhawk/books/
 └── DataStructureTest.java # Performance verification
 ```
 
-## 🚀 Features
+## Features
 
 - **O(1) Time Complexity** for author and rating lookups using HashMap indexing
 - **Professional Java Swing GUI** with intuitive interface
@@ -35,7 +35,7 @@ src/com/nullhawk/books/
 - **Clean Architecture** following SOLID principles
 - **Robust CSV Parsing** with quoted field support
 
-## 🎯 Required Tasks Implementation
+## Required Tasks Implementation
 
 ✅ **Get total number of books by a given author** - O(1) HashMap lookup  
 ✅ **Print names of all unique authors** - O(1) HashSet retrieval  
@@ -43,12 +43,12 @@ src/com/nullhawk/books/
 ✅ **Get books with specific rating** - O(1) HashMap lookup  
 ✅ **Get book names and prices by author** - O(1) HashMap lookup + Stream collection  
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 - **Java 8 or higher**
 - **PowerShell** (Windows) or **Bash** (Linux/Mac)
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Option 1: Run with Scripts (Recommended)
 
@@ -87,7 +87,7 @@ cd build
 java -cp . com.nullhawk.books.Main
 ```
 
-## 🎮 Usage
+## Usage
 
 ### Application Launcher
 The application starts with a launcher that allows you to choose between:
@@ -106,7 +106,7 @@ The application starts with a launcher that allows you to choose between:
 - **Performance Verification**: Data structure efficiency tests
 - **Batch Operations**: Multiple queries in sequence
 
-## 📊 Performance Characteristics
+## Performance Characteristics
 
 | Operation | Time Complexity | Data Structure |
 |-----------|-----------------|----------------|
@@ -117,7 +117,7 @@ The application starts with a launcher that allows you to choose between:
 | Year range filtering | **O(n)** | Stream + ArrayList |
 | Top-rated books | **O(n log n)** | Stream + Sorting |
 
-## ��️ Design Patterns
+## Design Patterns
 
 - **Service Layer Pattern**: Business logic separation
 - **Repository Pattern**: Data access abstraction
@@ -125,7 +125,7 @@ The application starts with a launcher that allows you to choose between:
 - **MVC Architecture**: Model-View-Controller separation
 - **Observer Pattern**: Asynchronous data loading
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 books/
@@ -148,7 +148,7 @@ books/
 └── README.md                    # This file
 ```
 
-## 🔧 Build Scripts
+## Build Scripts
 
 ### Run Scripts
 - **`run.sh`** / **`run.ps1`**: Compile and run the application
@@ -160,7 +160,7 @@ books/
 - **Error handling** with colored output
 - **Cross-platform** support (Windows/Linux/Mac)
 
-## 📈 Performance Results
+## Performance Results
 
 The application demonstrates significant performance improvements:
 
@@ -169,7 +169,7 @@ The application demonstrates significant performance improvements:
 - **Memory efficiency**: Optimal data structure usage
 - **Scalability**: Linear indexing time, constant lookup time
 
-## 🧪 Testing
+## Testing
 
 ### Built-in Performance Tests
 - **HashMap vs Linear Search** comparison
@@ -182,7 +182,7 @@ The application demonstrates significant performance improvements:
 - **Console Interface**: Batch operation testing
 - **Edge Cases**: Invalid inputs, boundary conditions
 
-## 🚀 Future Enhancements
+## Future Enhancements
 
 1. **Database Integration**: Replace in-memory storage
 2. **Caching Layer**: Redis implementation

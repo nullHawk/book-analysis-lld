@@ -66,24 +66,28 @@ if ($javaFiles.Count -eq 0) {
     exit 1
 }
 
-# Create a temporary file with all Java file paths
-$tempFile = [System.IO.Path]::GetTempFileName()
-$javaFiles | Out-File -FilePath $tempFile -Encoding ASCII
+Write-Status "Found $($javaFiles.Count) Java source files"
 
+# Compile directly without using @ symbol to avoid path issues
 try {
-    # Compile using the file list
-    $compileCommand = "javac -d build -cp src @`"$tempFile`""
-    Invoke-Expression $compileCommand
+    Write-Host "Executing: javac -d build -cp src [source files]"
     
-    if ($LASTEXITCODE -eq 0) {
+    # Build the argument list with all Java files
+    $javacArgs = @("-d", "build", "-cp", "src")
+    $javacArgs += $javaFiles
+    
+    # Use Start-Process with all arguments
+    $process = Start-Process -FilePath "javac" -ArgumentList $javacArgs -Wait -PassThru -NoNewWindow
+    
+    if ($process.ExitCode -eq 0) {
         Write-Status "Compilation successful!"
     } else {
-        Write-Error "Compilation failed!"
+        Write-Error "Compilation failed with exit code: $($process.ExitCode)"
         exit 1
     }
-} finally {
-    # Clean up temporary file
-    Remove-Item -Path $tempFile -ErrorAction SilentlyContinue
+} catch {
+    Write-Error "Compilation error: $($_.Exception.Message)"
+    exit 1
 }
 
 Write-Host
